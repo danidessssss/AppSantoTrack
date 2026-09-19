@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SantoTrack</string>
+    <string name="title_asignaturas">Asignaturas</string>
+    <string name="title_calculadora">Calculadora</string>
+    <string name="title_asistencia">Asistencia</string>
+    <string name="title_nueva_materia">Nueva Materia</string>
+    <string name="action_add_materia">Agregar Asignatura</string>
+</resources>

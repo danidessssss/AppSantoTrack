@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_asignaturas"
+        android:icon="@drawable/ic_auto_stories"
+        android:title="@string/title_asignaturas" />
+    <item
+        android:id="@+id/nav_calculadora"
+        android:icon="@drawable/ic_calculate"
+        android:title="@string/title_calculadora" />
+    <item
+        android:id="@+id/nav_nueva_materia"
+        android:icon="@drawable/ic_add_circle"
+        android:title="@string/title_nueva_materia" />
+</menu>
