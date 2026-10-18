@@ -1,47 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+    android:background="@color/background">
 
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/ic_auto_stories"
-        app:tint="@color/surface_container_highest" />
+    <!-- Empty State (Mostrado cuando el usuario aún no tiene asignaturas registradas) -->
+    <LinearLayout
+        android:id="@+id/layout_empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:visibility="visible">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aún no tienes asignaturas"
-        android:textColor="@color/on_surface"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"/>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_auto_stories"
+            app:tint="@color/surface_container_highest" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Agrega una asignatura para comenzar"
-        android:textColor="@color/on_surface_variant"
-        android:textSize="14sp"
-        android:textAlignment="center"
-        android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aún no tienes asignaturas"
+            android:textColor="@color/on_surface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/action_add_materia"
-        android:backgroundTint="@color/primary"
-        android:textColor="@color/on_primary"
-        app:icon="@drawable/ic_add_circle"
-        app:iconGravity="textStart"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agrega una asignatura para comenzar"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_empty_add_materia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/action_add_materia"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/on_primary"
+            app:icon="@drawable/ic_add_circle"
+            app:iconGravity="textStart"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"/>
+    </LinearLayout>
+
+    <!-- Content State (Mostrado cuando el usuario tiene al menos una asignatura registrada) -->
+    <LinearLayout
+        android:id="@+id/layout_content_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <!-- Header de sección con contador y acción rápida -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_header_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_subjects_title"
+                    android:textColor="@color/on_surface"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_header_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 asignaturas inscritas"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="13sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_content_add_materia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_add"
+                app:iconSize="18dp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/on_primary"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+
+        <!-- RecyclerView con listado de asignaturas -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_asignaturas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

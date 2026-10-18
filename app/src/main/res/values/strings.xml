@@ -5,4 +5,47 @@
     <string name="title_asistencia">Asistencia</string>
     <string name="title_nueva_materia">Nueva Materia</string>
     <string name="action_add_materia">Agregar Asignatura</string>
+
+    <!-- Pantalla de Login -->
+    <string name="login_welcome_title">Bienvenido a SantoTrack</string>
+    <string name="login_welcome_subtitle">Inicia sesión para organizar tus asignaturas y notas</string>
+    <string name="login_email_hint">Correo electrónico</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_button_text">Iniciar sesión</string>
+    <string name="login_loading_text">Iniciando sesión…</string>
+    <string name="login_error_empty_email">Por favor ingresa tu correo electrónico</string>
+    <string name="login_error_invalid_email">Ingresa un correo electrónico válido (ejemplo@dominio.com)</string>
+    <string name="login_error_empty_password">Por favor ingresa tu contraseña</string>
+    <string name="login_error_short_password">Se necesitan 6 o más caracteres para la contraseña</string>
+    <string name="login_error_invalid_credentials">Credenciales incorrectas. Verifica tu correo y contraseña.</string>
+    <string name="login_create_account_prompt">¿No tienes cuenta? Regístrate aquí</string>
+
+    <!-- Pantalla de Registro -->
+    <string name="register_title">Crear Cuenta</string>
+    <string name="register_subtitle">Regístrate para gestionar tus asignaturas y calificaciones</string>
+    <string name="register_name_hint">Nombre completo</string>
+    <string name="register_email_hint">Correo electrónico (ej: alumno@hola.com)</string>
+    <string name="register_password_hint">Contraseña (mínimo 6 caracteres)</string>
+    <string name="register_button_text">Crear Cuenta</string>
+    <string name="register_loading_text">Registrando usuario…</string>
+    <string name="register_login_prompt">¿Ya tienes cuenta? Iniciar sesión</string>
+    <string name="register_error_empty_name">Por favor ingresa tu nombre completo</string>
+    <string name="register_error_password_length">Se necesitan 6 o más caracteres para la contraseña</string>
+    <string name="register_error_email_exists">Este correo ya se encuentra registrado</string>
+    <string name="register_success">¡Cuenta creada con éxito!</string>
+
+    <!-- Gestión de Asignaturas -->
+    <string name="my_subjects_title">Mis Asignaturas</string>
+    <string name="my_subjects_subtitle">%1$d asignatura(s) registrada(s)</string>
+    <string name="subject_name_hint">Nombre de la asignatura (ej. Cálculo II)</string>
+    <string name="subject_error_empty_name">Por favor ingresa el nombre de la asignatura</string>
+    <string name="subject_saved_success">Asignatura guardada exitosamente</string>
+    <string name="subject_deleted_success">Asignatura eliminada</string>
+    <string name="dialog_delete_subject_title">Eliminar Asignatura</string>
+    <string name="dialog_delete_subject_msg">¿Deseas eliminar la asignatura \"%1$s\"?</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_logout">Cerrar sesión</string>
+    <string name="dialog_logout_title">Cerrar sesión</string>
+    <string name="dialog_logout_message">¿Deseas cerrar la sesión actual de %1$s?</string>
+    <string name="dialog_cancel">Cancelar</string>
 </resources>
