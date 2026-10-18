@@ -10,7 +10,7 @@ SantoTrack es una aplicación nativa para Android diseñada para ayudar a los es
 
 - **📚 Gestión de Asignaturas:** Crea y personaliza tus ramos con colores identificadores.
 - **📊 Simulador Predictivo:** Calcula qué nota mínima requieres en tu Examen o Certamen final para aprobar el ramo (ej. *"Necesitas un 4.5 en el Certamen 3 para aprobar"*).
-- **📈 Control de Notas (Calculadora):** Registra tus certámenes, controles y tareas con sus respectivas ponderaciones.
+- **📈 Control de Notas (Calculadora):** Registra tus pruebas, trabajos con sus respectivas ponderaciones.
 - **✅ Control de Asistencia:** Visualización de porcentajes de asistencia y cálculo del margen de inasistencias permitidas. (Próximamente)
 - **🔔 Alertas Tempranas:** Alertas visuales para asignaturas en riesgo de reprobación.
 
@@ -65,9 +65,3 @@ Sigue estos pasos para correr la aplicación en tu celular físico o en un emula
 - `app/src/main/res/layout`: Contiene todo el diseño visual (maquetación) en XML.
 - `app/src/main/res/values`: Contiene la base de nuestro sistema de diseño: `colors.xml`, `strings.xml` y `themes.xml`.
 - `app/build.gradle.kts`: Archivo de dependencias y configuración del módulo de la app.
-
----
-
-## 🤝 Contribución
-
-Si deseas contribuir, siéntete libre de hacer un _fork_ del repositorio, crear tu rama de características (`git checkout -b feature/NuevaCaracteristica`) y abrir un _Pull Request_.
